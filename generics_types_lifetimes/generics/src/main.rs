@@ -1,3 +1,4 @@
+#![allow(unused_variables)]
 fn largest_i32(list: &[i32]) -> i32 {
     let mut largest = list[0];
 
@@ -29,7 +30,7 @@ fn largest_char(list: &[char]) -> char {
 // read as, function largest is generic over some type T, has one param list and type of list is a slice of type T
 // will return a value of type T
 
-fn largest<T>(list: &[T]) -> T {
+fn largest<T: PartialOrd + Copy>(list: &[T]) -> T {
     let mut largest = list[0];
 
     for &item in list.iter() {
