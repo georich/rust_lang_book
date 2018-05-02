@@ -55,14 +55,18 @@ fn main() {
         println!("Breaking news! {}", item.summary()); // that implements Summarizable trait
     }
     // multiple trait bounds
+    use std::fmt::{Display, Debug};
+
     fn some_function<T: Display + Clone, U: Clone + Debug>(t: T, u: U) -> i32 {
         // do something
+        2
     }
     // alternate syntax
-    fn some_function<T, U>(t: T, u: U) -> i32
+    fn some_function_where<T, U>(t: T, u: U) -> i32
         where T: Display + Clone,
               U: Clone + Debug
     {
         // do something
+        2
     }
 }
