@@ -52,4 +52,14 @@ fn main() {
 
     let point = (3, 5);
     print_coordinates(&point);
+
+    // Refutability: Whether a Pattern Might Fail to Match
+    // example of an irrefutable pattern would be let x = 5;
+    // it will match for any possible value and cannot fail to match
+    // example of a refutable pattern is if let Some(x) = a_value
+    // if a_value is None rather than Some the Some(x) pattern would not match
+    // let Some(x) = some_option_value; // error
+    // if let Some(x) = some_option_value {
+    //     println!("{}", x);
+    // }
 }
