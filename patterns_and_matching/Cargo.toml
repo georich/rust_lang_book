@@ -1,0 +1,6 @@
+[package]
+name = "patterns_and_matching"
+version = "0.1.0"
+authors = ["George Richards <georich@protonmail.com>"]
+
+[dependencies]
